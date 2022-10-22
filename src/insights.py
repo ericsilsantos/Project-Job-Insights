@@ -1,11 +1,12 @@
 from scr.jobs import read
 
+
 def get_unique_job_types(path):
     jobs_list = read(path)
     jobs_types = set()
     for job in jobs_list:
-        job_type.add(job["job_type"])
-    return job_type
+        jobs_type.add(job["job_type"])
+    return jobs_type
 
 
 def filter_by_job_type(jobs, job_type):
