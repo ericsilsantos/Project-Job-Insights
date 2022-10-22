@@ -5,8 +5,8 @@ def get_unique_job_types(path):
     jobs_list = read(path)
     jobs_types = set()
     for job in jobs_list:
-        jobs_type.add(job["job_type"])
-    return jobs_type
+        jobs_types.add(job["job_type"])
+    return jobs_types
 
 
 def filter_by_job_type(jobs, job_type):
