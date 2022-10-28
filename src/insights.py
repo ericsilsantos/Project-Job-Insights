@@ -66,7 +66,7 @@ def matches_salary_range(job, salary):
 
     if job["min_salary"] <= salary <= job["max_salary"]:
         return True
-    else: 
+    else:
         return False
 
 
