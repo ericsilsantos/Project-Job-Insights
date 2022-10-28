@@ -54,8 +54,12 @@ def get_min_salary(path):
 
 def matches_salary_range(job, salary):
     if "min_salary" not in job or "max_salary" not in job:
-        raise ValueError("Não foi encontrado o salário mínimo ou o salário máximo")
-    elif type(job["min_salary"]) != int or type(job["max_salary"]) != int or type(salary) != int:
+        raise ValueError("Não foi encontrado min_salary ou max_salary")
+    elif (
+        type(job["min_salary"]) != int
+        or type(job["max_salary"]) != int
+        or type(salary) != int
+    ):
         raise ValueError("Valores não são inteiros")
     elif(job["max_salary"] < job["min_salary"]):
         raise ValueError("o min_salary é maior que o max_salary")
